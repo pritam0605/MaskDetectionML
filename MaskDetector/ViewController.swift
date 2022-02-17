@@ -32,6 +32,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     //MARK: - IBAction
     @IBAction func testPhoto(sender: UIButton) {
+    print("Test")
         let pickerVC = UIImagePickerController()
         pickerVC.sourceType = .photoLibrary
         pickerVC.delegate = self
