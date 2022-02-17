@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F47-FZ-zud">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="lS1-Fp-COX">
+            <objects>
+                <viewController id="F47-FZ-zud" customClass="ViewController" customModule="MaskDetector" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d98-fC-nuw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtS-bs-p4B">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hkA-5M-zcJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <state key="normal" title="Select Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testPhotoWithSender:" destination="F47-FZ-zud" eventType="touchUpInside" id="Cdd-Qd-UaB"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nNW-Rk-wAJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="628"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detections" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy1-Dn-ptW">
+                                <rect key="frame" x="0.0" y="672" width="414" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="njQ-7p-8fw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PR2-xY-RpS"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uy1-Dn-ptW" firstAttribute="trailing" secondItem="PR2-xY-RpS" secondAttribute="trailing" id="51p-e9-FaQ"/>
+                            <constraint firstItem="nNW-Rk-wAJ" firstAttribute="trailing" secondItem="PR2-xY-RpS" secondAttribute="trailing" id="Atx-Uh-Ndg"/>
+                            <constraint firstItem="uy1-Dn-ptW" firstAttribute="leading" secondItem="PR2-xY-RpS" secondAttribute="leading" id="JER-M7-SXq"/>
+                            <constraint firstItem="JtS-bs-p4B" firstAttribute="leading" secondItem="PR2-xY-RpS" secondAttribute="leading" id="OIi-0A-epq"/>
+                            <constraint firstItem="JtS-bs-p4B" firstAttribute="top" secondItem="uy1-Dn-ptW" secondAttribute="bottom" id="Q0Q-j4-zHd"/>
+                            <constraint firstItem="nNW-Rk-wAJ" firstAttribute="top" secondItem="PR2-xY-RpS" secondAttribute="top" id="T7S-H6-7sQ"/>
+                            <constraint firstItem="uy1-Dn-ptW" firstAttribute="top" secondItem="nNW-Rk-wAJ" secondAttribute="bottom" id="c2W-nv-TMV"/>
+                            <constraint firstItem="JtS-bs-p4B" firstAttribute="bottom" secondItem="PR2-xY-RpS" secondAttribute="bottom" id="pYC-wH-rSW"/>
+                            <constraint firstItem="nNW-Rk-wAJ" firstAttribute="leading" secondItem="PR2-xY-RpS" secondAttribute="leading" id="ufo-2l-w79"/>
+                            <constraint firstItem="JtS-bs-p4B" firstAttribute="trailing" secondItem="PR2-xY-RpS" secondAttribute="trailing" id="xas-jK-9y2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detectionLabel" destination="uy1-Dn-ptW" id="g2d-ho-0j5"/>
+                        <outlet property="photoImageView" destination="nNW-Rk-wAJ" id="BiU-Wx-9PR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykl-Ma-Puu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="15"/>
+        </scene>
+    </scenes>
+</document>
